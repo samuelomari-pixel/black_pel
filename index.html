@@ -1,103 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Login Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background:url('https://chatgpt.com/s/m_69c383e2a84081918583b07fad7208a6');
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <title>Blackpel Website</title>
 
-    .form-container {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0;
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center; 
+            color: white; 
+        }
 
-    h2 {
-      text-align: center;
-    }
+        header{
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none; 
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
 
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-
-    .error {
-      color: red;
-      font-size: 14px;
-    }
-  </style>
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px; 
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        button{
+            position: centre;
+            background-color: rgba(0, 0, 0, 0.7);
+            font-weight: 900;
+            width: 100px;
+            height: 10;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="form-container">
-  <h2>Login Form</h2>
-  <form id="loginForm">
-    <input type="text" id="name" placeholder="Full Name" required>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="password" placeholder="Password" required>
-    <input type="tel" id="phone" placeholder="Phone Number" required>
-    <p class="error" id="errorMsg"></p>
-  </form>
-  <a href="http://127.0.0.1:5500/index.html" target="_blank">
-       <button>SUBMIT</button>
+    <header>
+        <h1>BLACKPEL</h1>
+        <p>Innovative Digital Solutions</p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    
+    <section id="home">
+        <h2>Welcome to Blackpel</h2>
+        <p>
+            Blackpel is a technology-based company focused on providing digital solutions to individuals,
+            schools, and businesses. Our goal is to use technology to make work easier and more efficient.
+        </p>
+    </section>
+
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Blackpel was created to help people manage information using simple and reliable systems.
+            We believe technology should be easy to use and accessible to everyone.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Website Development</li>
+            <li>System Design</li>
+            <li>Data Management</li>
+            <li>Technical Support</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@blackpel.com</p>
+        <p>Phone: +254 700 000 000</p>
+    </section>
+    <a href="http://127.0.0.1:5502/index.html" target="_blank">
+        <button>SIGN UP</button>
     </a>
-</div>
 
-<script>
-  document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let password = document.getElementById("password").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let errorMsg = document.getElementById("errorMsg");
-
-    if (name === "" || email === "" || password === "" || phone === "") {
-      errorMsg.textContent = "All fields are required!";
-      return;
-    }
-
-    if (password.length < 6) {
-      errorMsg.textContent = "Password must be at least 6 characters.";
-      return;
-    }
-
-    if (!/^\d{10,15}$/.test(phone)) {
-      errorMsg.textContent = "Enter a valid phone number.";
-      return;
-    }
-
-    errorMsg.style.color = "green";
-    errorMsg.textContent = "Form submitted successfully!";
-  });
-</script>
+    <footer>
+        <p>&copy; 2026 Blackpel. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
